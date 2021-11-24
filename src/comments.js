@@ -16,8 +16,10 @@ const postComments = () => fetch(baseUrl, {
 
 // postComments();
 // get comment
+
 const getComments = async () => {
-  const data = await fetch(baseUrl+'?item_id=item1');
+  const id = 'item1';
+  const data = await fetch(baseUrl+`?item_id=${id}`);
   const result = data.json();
   console.log(result)
   return result;
