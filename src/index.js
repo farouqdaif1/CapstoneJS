@@ -21,6 +21,5 @@ const render = async () => {
 };
 document.addEventListener('DOMContentLoaded', async () => {
   await render();
+  console.log(await counter(mealsList));
 });
-counter(mealsList);
-// console.log();

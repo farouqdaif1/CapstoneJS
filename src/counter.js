@@ -1,7 +1,2 @@
-// import getMeals from './consume-api';
-
-const counter = (mealsList) => {
-    console.log(mealsList.children);
-};
-// console.log(counter());
+const counter = async (mealsList) => mealsList.children.length;
 export default counter;
