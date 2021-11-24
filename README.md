@@ -56,7 +56,7 @@ Next, execute `npm run build` and check if the HTML body style has changed.
 
 👤 Aku khan
 
-- GitHub: [Aku khan](https://github.com/aakbarkhan)
+- GitHub: [@aakbarkhan](https://github.com/aakbarkhan)
 - LinkedIn: [Aku khan](https://www.linkedin.com/in/akbar-khan-b57709182/)
 
 👤 Farouq Daif 
