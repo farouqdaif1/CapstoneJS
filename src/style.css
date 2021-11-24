@@ -47,7 +47,7 @@ main {
   margin-top: 5%;
   padding: 5%;
   /* background-color: #ff1018; */
-  background-image: url("./src/Ginett-4.jpg");
+  background-image: url("/src/Ginett-4.jpg");
 }
 .meals {
   list-style: none;
@@ -57,13 +57,14 @@ main {
 }
 .meals li {
   width: 300px;
-  height: 350px;
+  height: 425px;
   background-color: #f5c33b;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  margin-left: 30px;
   border-radius: 7.5%;
   -webkit-border-radius: 7.5%;
   -moz-border-radius: 7.5%;
@@ -75,6 +76,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.meals figure figcaption {
+  padding: 5%;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff1018;
 }
 .meals #buttons {
   width: 250px;
@@ -109,4 +118,24 @@ main {
   -moz-border-radius: 8%;
   -ms-border-radius: 8%;
   -o-border-radius: 8%;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5c33b;
+  font-family: "Libre Baskerville", serif;
+  color: #ff1018;
+
+  font-weight: 900;
+}
+footer h3 a {
+  text-decoration: none;
+  font-family: "Mr De Haviland", "cursive";
+  font-size: 30px;
+  color: #fa383e;
+  font-weight: 900;
 }
