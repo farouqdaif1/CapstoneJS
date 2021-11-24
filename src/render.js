@@ -19,9 +19,9 @@ const render = async () => {
         <i class="fas fa-heart"></i>
         <div id="num-liks">250 <span>Likes</span></div>
         </button>
-        <button id="comments">
+        <button class="com" id=${element.idMeal}>
         <i class="fas fa-comment"></i>
-        <div id="num-comments">250<span>commints</span></div>
+        <div id="num-comments">250<span>comment</span></div>
         </button>
         </div>
         </li>`;

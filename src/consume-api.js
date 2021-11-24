@@ -6,3 +6,4 @@ const getMeals = async () => {
   return result;
 };
 export default getMeals;
+// idMeal

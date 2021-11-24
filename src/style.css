@@ -3,6 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -11,23 +12,33 @@ header {
   color: #fa383e;
   margin-bottom: 3%;
 }
+
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* #F5C33B */
 }
+
 .logo {
   margin-left: 3%;
 }
+
+footer h3 a {
+  text-decoration: none;
+  font-family: "Mr De Haviland", cursive;
+  font-size: 30px;
+  color: #fa383e;
+  font-weight: 900;
+}
+
 .logo a {
   text-decoration: none;
   color: #fa383e;
-  font-family: "Mr De Haviland", "cursive";
+  font-family: "Mr De Haviland", cursive;
   font-size: 70px;
   font-weight: 900;
 }
+
 .nav-list {
   list-style: none;
   width: 50%;
@@ -36,6 +47,7 @@ header nav {
   margin-right: 3%;
   padding: 2%;
 }
+
 .nav-list li a {
   text-decoration: none;
   color: #fa383e;
@@ -43,18 +55,22 @@ header nav {
   font-family: "Libre Baskerville", serif;
   font-weight: 900;
 }
+
 main {
   margin-top: 5%;
   padding: 5%;
+
   /* background-color: #ff1018; */
   background-image: url("/src/Ginett-4.jpg");
 }
+
 .meals {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .meals li {
   width: 300px;
   height: 425px;
@@ -71,12 +87,14 @@ main {
   -ms-border-radius: 7.5%;
   -o-border-radius: 7.5%;
 }
+
 .meals figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .meals figure figcaption {
   padding: 5%;
   text-align: center;
@@ -85,12 +103,14 @@ main {
   font-weight: 600;
   color: #ff1018;
 }
+
 .meals #buttons {
   width: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .meals li #likes {
   display: flex;
   border: none;
@@ -105,7 +125,8 @@ main {
   -ms-border-radius: 8%;
   -o-border-radius: 8%;
 }
-.meals li #comments {
+
+.meals li .com {
   display: flex;
   border: none;
   color: white;
@@ -119,6 +140,7 @@ main {
   -ms-border-radius: 8%;
   -o-border-radius: 8%;
 }
+
 footer {
   width: 100%;
   display: flex;
@@ -129,13 +151,11 @@ footer {
   background-color: #f5c33b;
   font-family: "Libre Baskerville", serif;
   color: #ff1018;
-
   font-weight: 900;
 }
-footer h3 a {
-  text-decoration: none;
-  font-family: "Mr De Haviland", "cursive";
-  font-size: 30px;
-  color: #fa383e;
-  font-weight: 900;
+#popup {
+  position: absolute;
+}
+.overaly {
+  background-color: rgba(0, 0, 0, 0.7);
 }
