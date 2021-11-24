@@ -3,3 +3,110 @@
   margin: 0;
   box-sizing: border-box;
 }
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f5c33b;
+  color: #fa383e;
+  margin-bottom: 3%;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* #F5C33B */
+}
+.logo {
+  margin-left: 3%;
+}
+.logo a {
+  text-decoration: none;
+  color: #fa383e;
+  font-family: "Mr De Haviland", "cursive";
+  font-size: 70px;
+  font-weight: 900;
+}
+.nav-list {
+  list-style: none;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3%;
+  padding: 2%;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #fa383e;
+  font-size: 24px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 900;
+}
+main {
+  margin-top: 5%;
+  padding: 5%;
+  /* background-color: #ff1018; */
+  background-image: url("./src/Ginett-4.jpg");
+}
+.meals {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.meals li {
+  width: 300px;
+  height: 350px;
+  background-color: #f5c33b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 7.5%;
+  -webkit-border-radius: 7.5%;
+  -moz-border-radius: 7.5%;
+  -ms-border-radius: 7.5%;
+  -o-border-radius: 7.5%;
+}
+.meals figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.meals #buttons {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.meals li #likes {
+  display: flex;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fa383e;
+  border-radius: 8%;
+  -webkit-border-radius: 8%;
+  -moz-border-radius: 8%;
+  -ms-border-radius: 8%;
+  -o-border-radius: 8%;
+}
+.meals li #comments {
+  display: flex;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: #fa383e;
+  padding: 15px 15px;
+  border-radius: 8%;
+  -webkit-border-radius: 8%;
+  -moz-border-radius: 8%;
+  -ms-border-radius: 8%;
+  -o-border-radius: 8%;
+}
