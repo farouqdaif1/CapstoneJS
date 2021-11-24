@@ -3,6 +3,7 @@ import './style.css';
 // import counter from './counter';
 import render from './render';
 // import { getikes, addLoikes } from './creatnewapp';
+import getComments from './comments'
 
 document.addEventListener('DOMContentLoaded', async () => {
   await render();
