@@ -11,8 +11,7 @@ const postComments = () => fetch(baseUrl, {
         "comment": "Hello"
     }),
   })
-    .then((res) => res)
-    .catch( (rej) => console.log(rej) );
+    .then((res) => res);
 
 // postComments();
 // get comment
@@ -24,5 +23,13 @@ const getComments = async () => {
   console.log(result)
   return result;
 };
-getComments()
+// getComments();
+
+const counter = async () => {
+    const dataFromAPI  = await getComments();
+    // console.log(dataFromAPI.length);
+    return dataFromAPI.length;
+}
+
+console.log(counter());
 export default getComments;
