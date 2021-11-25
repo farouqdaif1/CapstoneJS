@@ -20,16 +20,15 @@ const getComments = async () => {
   const id = 'item1';
   const data = await fetch(`${baseUrl}?item_id=${id}`);
   const result = data.json();
-  console.log(result);
+  // console.log(result);
   return result;
 };
 // getComments();
 
 const counter = async () => {
   const dataFromAPI = await getComments();
-  // console.log(dataFromAPI.length);
   return dataFromAPI.length;
 };
 
-console.log(counter());
-export default getComments;
+// console.log(counter());
+export { getComments, counter };

@@ -177,8 +177,10 @@ footer {
 }
 
 #popup .content {
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
@@ -188,7 +190,7 @@ footer {
   background-color: #f5c33b;
   color: #fa383e;
   width: 600px;
-  height: 600px;
+  /* height: 600px; */
   z-index: 2;
   padding: 20px;
   border-radius: 5%;

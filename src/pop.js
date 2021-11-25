@@ -1,8 +1,11 @@
 // import getMeals from './consume-api';
+import { getComments, counter } from './comments';
 
+// console.log(num);
 const popCard = async (data) => {
+  // console.log(num);
   const { meals } = data;
-  meals.forEach((meal, index) => {
+  meals.forEach(async (meal, index) => {
     if (index < 6) {
       const pop = document.querySelector('#popup');
       // creat overlay div
@@ -44,8 +47,18 @@ const popCard = async (data) => {
       content.appendChild(commnts);
       // pragragh inside  comments
       const pra = document.createElement('h3');
-      pra.innerText = 'comments()';
+      const num = await counter();
+      pra.innerText = `comments(${num})`;
       commnts.appendChild(pra);
+      const allComments = document.createElement('div');
+      content.appendChild(allComments);
+      const commentsAll = await getComments();
+      console.log(commentsAll);
+      commentsAll.forEach((e) => {
+        const special = document.createElement('p');
+        special.innerText = `${e.creation_date}${e.username}${e.comment}`;
+        allComments.appendChild(special);
+      });
       // creat form
       const form = document.createElement('form');
       form.id = 'comment_form';
