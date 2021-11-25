@@ -212,3 +212,13 @@ footer {
   font-weight: 900;
   cursor: pointer;
 }
+#popup .content .form_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#popup .content #comment_form {
+  display: flex;
+  flex-direction: column;
+}

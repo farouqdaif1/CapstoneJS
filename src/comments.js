@@ -31,4 +31,4 @@ const counter = async () => {
 };
 
 // console.log(counter());
-export { getComments, counter };
+export { getComments, counter, postComments };

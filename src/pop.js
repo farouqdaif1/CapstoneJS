@@ -1,5 +1,5 @@
 // import getMeals from './consume-api';
-import { getComments, counter } from './comments';
+import { getComments, counter, postComments } from './comments';
 
 // console.log(num);
 const popCard = async (data) => {
@@ -65,6 +65,8 @@ const popCard = async (data) => {
       content.appendChild(form);
       // form title
       const formTitle = document.createElement('h3');
+      formTitle.className = 'form_title';
+
       formTitle.innerHTML = 'Add a comment';
       form.appendChild(formTitle);
       // form name
@@ -89,7 +91,7 @@ const popCard = async (data) => {
       const submitCom = document.createElement('button');
       submitCom.type = 'submit';
       submitCom.className = 'form_item';
-      submitCom.id = 'submit_btn';
+      submitCom.id = `submit_${meal.idMeal}`;
       // submitCom.setAttribute('data', num);
       submitCom.innerHTML = 'Comment';
       form.appendChild(submitCom);

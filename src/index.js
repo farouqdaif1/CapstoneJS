@@ -42,6 +42,9 @@ const displayModal = async () => {
     });
   });
 };
+const addPost= async () => {
+  
+}
 
 document.addEventListener('DOMContentLoaded', async () => {
   await render();
