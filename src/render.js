@@ -9,7 +9,7 @@ const render = async () => {
   meals.forEach((element, index) => {
     if (index < 6) {
       mealsList.innerHTML += `
-        <li>
+        <li  id=id-${element.idMeal}>
         <figure>
         <img src="${element.strMealThumb}" alt="meal photo" width="250" height="250">
         <figcaption>${element.strMeal}</figcaption>
@@ -19,9 +19,9 @@ const render = async () => {
         <i class="fas fa-heart"></i>
         <div id="num-liks">250 <span>Likes</span></div>
         </button>
-        <button class="com" id=${element.idMeal}>
-        <i class="fas fa-comment"></i>
-        <div id="num-comments">250<span>comment</span></div>
+        <button  id=x-${element.idMeal} class="com ${element.idMeal}">
+        <i class="fas fa-comment ${element.idMeal}" ></i>
+        <div id="num-comments" class="num-comments  ${element.idMeal}">250<span class="span ${element.idMeal}">comment</span></div>
         </button>
         </div>
         </li>`;

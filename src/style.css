@@ -153,9 +153,60 @@ footer {
   color: #ff1018;
   font-weight: 900;
 }
+
 #popup {
-  position: absolute;
+  display: none;
 }
-.overaly {
+
+#popup.active {
+  display: block;
+}
+
+#popup .overaly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+#popup .overaly.hidden {
+  display: none;
+}
+
+#popup .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background-color: #f5c33b;
+  color: #fa383e;
+  width: 600px;
+  height: 600px;
+  z-index: 2;
+  padding: 20px;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+
+#popup .content.hidden {
+  display: none;
+}
+
+#popup .content .close-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
 }
