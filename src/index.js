@@ -2,7 +2,7 @@ import './style.css';
 import getMeals from './consume-api';
 // import counter from './counter';
 import render from './render';
-import popCard from './pop';
+import {popCard, addPost} from './pop';
 // import { getikes, addLoikes } from './creatnewapp';
 import { getComments, counter } from './comments';
 
@@ -46,4 +46,5 @@ const displayModal = async () => {
 document.addEventListener('DOMContentLoaded', async () => {
   await render();
   await displayModal();
+  await addPost();
 });

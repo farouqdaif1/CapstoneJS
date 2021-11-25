@@ -1,14 +1,17 @@
+// import {getMeals} from './consume-api';
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Jxa2o7XJAhJoB2RZ7ghK/comments';
 // post the comments to api
-const postComments = () => fetch(baseUrl, {
+
+const postComments = (id,username, text) => fetch(baseUrl, {
+
   method: 'POST',
   headers: {
     'content-type': 'application/json',
   },
   body: JSON.stringify({
-    item_id: 'item1',
-    username: 'Jane',
-    comment: 'Hello',
+    item_id: id,
+    username: username,
+    comment: text,
   }),
 })
   .then((res) => res);
@@ -16,8 +19,8 @@ const postComments = () => fetch(baseUrl, {
 // postComments();
 // get comment
 
-const getComments = async () => {
-  const id = 'item1';
+const getComments = async (id = 12345abc) => {
+ 
   const data = await fetch(`${baseUrl}?item_id=${id}`);
   const result = data.json();
   // console.log(result);
@@ -31,4 +34,4 @@ const counter = async () => {
 };
 
 // console.log(counter());
-export { getComments, counter };
+export { getComments, counter, postComments };

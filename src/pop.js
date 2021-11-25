@@ -1,10 +1,13 @@
 // import getMeals from './consume-api';
-import { getComments, counter } from './comments';
+import { getComments, counter, postComments } from './comments';
+
+
 
 // console.log(num);
 const popCard = async (data) => {
   // console.log(num);
   const { meals } = data;
+  
   meals.forEach(async (meal, index) => {
     if (index < 6) {
       const pop = document.querySelector('#popup');
@@ -88,12 +91,30 @@ const popCard = async (data) => {
       // creat submit button
       const submitCom = document.createElement('button');
       submitCom.type = 'submit';
-      submitCom.className = 'form_item';
-      submitCom.id = 'submit_btn';
+      submitCom.className = 'form_item1';
+      // submitCom.id = 'submit_btn';
+      submitCom.id = `submit_${meal.idMeal}`;
+
       // submitCom.setAttribute('data', num);
       submitCom.innerHTML = 'Comment';
       form.appendChild(submitCom);
+      // console.log(submitBtn);
+      const submitBtn = document.querySelectorAll('.form_item1');
+      submitBtn.forEach(  (btn) => {
+        btn.addEventListener( 'click', async (e)=> {
+          const id = e.target.id;
+          // console.log(id)
+          const  commentP  = await postComments(12345abc, 'Farouq', 'I love fish');
+          console.log(commentP)
+        })
+      })
     }
   });
 };
-export default popCard;
+
+const addPost =async () => {
+  // const  commentP  = await postComments();
+  // console.log(commentP)
+}
+addPost()
+export  {popCard, addPost};
