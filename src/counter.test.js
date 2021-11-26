@@ -10,7 +10,8 @@ test('test Number of elements returned by counterItem', () => {
         + '<li>'
         + '<li>'
         + '<li>'
+        + '<li>'
         + '</ul>';
   const container = document.querySelector('ul');
-  expect(counterItem(container)).toBe(4);
+  expect(counterItem(container)).toBe(5);
 });

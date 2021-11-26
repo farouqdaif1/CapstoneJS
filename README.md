@@ -4,6 +4,10 @@ A JavaScript project for the Leaderboard list app, using webpack and ES6 feature
 
 ![image] ![screenshot](photo.jpg)
 
+## Video link
+
+[loom Link] (https://loom.com/share/cebf106ada4f4ac789399a6eb27dd385)
+
 ## Live Demo
 
 [Live Demo Link]
