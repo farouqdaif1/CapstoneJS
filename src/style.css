@@ -218,7 +218,7 @@ footer {
   justify-content: center;
 }
 
-#popup .content #comment_form {
+#popup .content .form_x {
   display: flex;
   flex-direction: column;
 }

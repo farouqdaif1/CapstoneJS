@@ -4,7 +4,7 @@ import getMeals from './consume-api';
 import render from './render';
 import popCard from './pop';
 // import { getikes, addLoikes } from './creatnewapp';
-import { getComments, counter } from './comments';
+// import { getComments, counter } from './comments';
 
 // const dataFromAPI = await getMeals();
 //   const  {meals}  = dataFromAPI;
@@ -35,17 +35,12 @@ const displayModal = async () => {
       const cards = document.querySelectorAll(`.${clsBtn.classList[1]}`);
       const pop = document.querySelector('#popup');
       pop.classList.toggle('active');
-      // console.log(pop);
       cards.forEach((card) => {
         card.classList.toggle('hidden');
       });
     });
   });
 };
-const addPost= async () => {
-  
-}
-
 document.addEventListener('DOMContentLoaded', async () => {
   await render();
   await displayModal();

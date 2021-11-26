@@ -21,7 +21,7 @@ const render = async () => {
         </button>
         <button  id=x-${element.idMeal} class="com ${element.idMeal}">
         <i class="fas fa-comment ${element.idMeal}" ></i>
-        <div id="num-comments" class="num-comments  ${element.idMeal}">250<span class="span ${element.idMeal}">comment</span></div>
+        <div id="num-comments" class="num-comments  ${element.idMeal}"><span class="span ${element.idMeal}">comment</span></div>
         </button>
         </div>
         </li>`;
