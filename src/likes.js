@@ -10,13 +10,13 @@ const addLikes = (id) => fetch(baseUrl, {
   }),
 })
   .then((res) => res);
-   const getikes = () => fetch(baseUrl)
+const getikes = () => fetch(baseUrl)
   .then((res) => res.json());
 
-  // const getikes = async () => {
-  //   const response = await fetch(baseUrl);
-  //    return response; 
-  //   }; 
+// const getikes = async () => {
+//   const response = await fetch(baseUrl);
+//    return response;
+//   };
 // addLikes();
 
 export { getikes, addLikes };

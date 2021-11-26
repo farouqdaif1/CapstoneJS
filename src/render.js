@@ -1,5 +1,5 @@
 import getMeals from './consume-api';
-import { getikes, addLikes } from './likes';
+// import { getikes, addLikes } from './likes';
 
 const mealsList = document.querySelector('.meals');
 // render 6 meals from api

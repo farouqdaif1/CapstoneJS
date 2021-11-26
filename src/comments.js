@@ -10,12 +10,10 @@ const postComments = async (id, name, commentx) => {
       item_id: `${id}`,
       username: `${name}`,
       comment: `${commentx}`,
-    })
+    }),
   });
-  return response;    
-
-
-}
+  return response;
+};
 postComments();
 
 const getComments = async (x) => {
@@ -28,7 +26,3 @@ const counter = async (id) => {
   return dataFromAPI.length;
 };
 export { getComments, counter, postComments };
-
-
-
-// const postScores = async (url, data) => { const response = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', }, body: JSON.stringify(data), }); return response; }; 
