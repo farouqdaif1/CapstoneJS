@@ -1,5 +1,4 @@
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/Jxa2o7XJAhJoB2RZ7ghK/likes';
-// const id = Jxa2o7XJAhJoB2RZ7ghK;
 const addLikes = (id) => fetch(baseUrl, {
   method: 'POST',
   headers: {
