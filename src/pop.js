@@ -97,16 +97,26 @@ const popCard = async (data) => {
       formts.forEach((form) => {
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
+          e.stopPropagation();
           const id = document.querySelector(`#content2-${form.id}`);
           const Inputname = document.querySelector(`#name-${form.id}`);
           const Inputcoment = document.querySelector(`#insight-${form.id}`);
           const namev = Inputname.value;
           const commentv = Inputcoment.value;
-          await postComments(id.id, namev, commentv);
-          window.location.reload();
+          console.log(e.target.previousElementSibling);
+
+          // await postComments(id.id, namev, commentv).then( () => {} showComment(e.target.previousElementSibling, namev, commentv));
+          // window.location.reload();
+
         });
       });
     }
   });
 };
+function showComment(namev, commentv) {
+  const ulCont = document.querySelector('');
+  const li = document.createElement('p');
+  li.innerHTML = `${namev} : ${commentv}`;
+  ulCont.appendChild(li);
+}
 export default popCard;
