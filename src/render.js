@@ -7,9 +7,10 @@ const mealsList = document.querySelector('.meals');
 const render = async () => {
   const dataFromAPI = await getMeals();
   const { meals } = dataFromAPI;
-
+  const numLikes = await getikes();
   meals.forEach((element, index) => {
     if (index < 6) {
+      // console.log(numLikes[1].likes)
       mealsList.innerHTML += `
         <li  id=id-${element.idMeal}>
         <figure>
@@ -17,9 +18,9 @@ const render = async () => {
         <figcaption>${element.strMeal}</figcaption>
         </figure>
         <div id="buttons">
-        <button class="like" id="likes">
+        <button class="like" id="l-${element.idMeal}">
         '<i class="fas fa-heart"></i> '
-        <div id="num-liks"> </div>
+        <div class="num-liks">${numLikes[index+2].likes} </div>
         </button>
         <button  id=x-${element.idMeal} class="com ${element.idMeal}">
         <i class="fas fa-comment ${element.idMeal}" ></i>
