@@ -21,14 +21,6 @@ const likesNum = await getikes();
 // const postLikes = await addLikes();
 // console.log(likesNum)
 const likesBtn = document.querySelectorAll('.like');
-console.log(likesBtn);
-// likesBtn.innerHTML = '<i class="fas fa-heart"></i>' + likesNum[0].likes + Likes;
-// 52959
-//  52819
-//  52944
-//  53043
-//  52802
-//  52918
 likesBtn.forEach((btn,i) => {
   btn.addEventListener('click', (e) => {
     // console.log(data.meals[i].idMeal);
@@ -66,25 +58,27 @@ document.addEventListener('DOMContentLoaded', async () => {
   await displayModal();
 });
 
-const showLikes = (arr) =>{
+const showLikes = (arr,i) =>{
   const likesBtn = document.querySelector('#likes');
-  likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${arr[0].likes} Likes`
+  likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${arr[0].likes} Likes`;
 }
 
 // count+1
 
  const countAdd = async (id) => {
   const numLikes = await getikes();
+  console.log(numLikes);
   numLikes.forEach( (like, i) => {
     if(like.item_id === id ){
       addLikes(id);
       like.likes  =like.likes + 1;
-      console.log(like.likes)
-      const likesBtn = document.querySelector('#likes');
-      likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`
+      // console.log(id)
+      const likesBtn = document.querySelector(`#l-${id}`);
+      console.log(likesBtn.id)
+      likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`;
     }
   })
   // console.log(numLikes)
 }
 
-countAdd()
+// countAdd()

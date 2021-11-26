@@ -17,9 +17,9 @@ const render = async () => {
         <figcaption>${element.strMeal}</figcaption>
         </figure>
         <div id="buttons">
-        <button class="like" id="likes">
+        <button class="like" id="l-${element.idMeal}">
         '<i class="fas fa-heart"></i> '
-        <div id="num-liks"> </div>
+        <div class="num-liks"> </div>
         </button>
         <button  id=x-${element.idMeal} class="com ${element.idMeal}">
         <i class="fas fa-comment ${element.idMeal}" ></i>
