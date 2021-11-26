@@ -1,6 +1,6 @@
 # CapstoneJS
 
-A JavaScript project for the Leaderboard list app, using webpack and ES6 features.The leaderboard website displays scores submitted by different players. It also allows us to submit our score. All data is preserved thanks to the external Leaderboard API service.
+In this project we will prepare a Kanban board with a GitHub project, with my Learning partner. It's javascript capstone project with external API..
 
 ![image] ![screenshot](photo.jpg)
 
