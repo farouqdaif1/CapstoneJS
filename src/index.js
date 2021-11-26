@@ -21,18 +21,18 @@ const likesNum = await getikes();
 // const postLikes = await addLikes();
 // console.log(likesNum)
 const likesBtn = document.querySelectorAll('.like');
-// console.log(likesBtn);
-// console.log(data.meals)
+console.log(likesBtn);
 // likesBtn.innerHTML = '<i class="fas fa-heart"></i>' + likesNum[0].likes + Likes;
-likesBtn.forEach((btn) => {
+// 52959
+//  52819
+//  52944
+//  53043
+//  52802
+//  52918
+likesBtn.forEach((btn,i) => {
   btn.addEventListener('click', (e) => {
-    const id = (e.target.parentElement.parentElement.id).match(/[0-9]/g);
-    console.log(id);
-    // console.log(typeof(id));
-
-    // countAdd(id)
-    // console.log(parseInt(e.target.parentElement.parentElement.parentElement.id));
- 
+    // console.log(data.meals[i].idMeal);
+  countAdd(data.meals[i].idMeal);
   })
 
 })
@@ -66,32 +66,25 @@ document.addEventListener('DOMContentLoaded', async () => {
   await displayModal();
 });
 
+const showLikes = (arr) =>{
+  const likesBtn = document.querySelector('#likes');
+  likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${arr[0].likes} Likes`
+}
+
 // count+1
 
  const countAdd = async (id) => {
   const numLikes = await getikes();
-  console.log(numLikes)
-  numLikes.forEach( (like, idx) => {
-    if(like.item_id == id ){
-      addLikes(id)
+  numLikes.forEach( (like, i) => {
+    if(like.item_id === id ){
+      addLikes(id);
       like.likes  =like.likes + 1;
-      console.log(like.likes + "hello")
-      const likesTxt = document.querySelectorAll('#num-liks');
-      // console.log(likesBtn);
-      // console.log(typeof(likesBtn));
-      likesTxt[id].innerHTML = 
-      likesBtn.forEach((oneBtn) => {
-        oneBtn.addEventListener('click', () => {
-          oneBtn.innerHTML = 'hello';
-
-        })
-      })
-
-      // likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`
-      
+      console.log(like.likes)
+      const likesBtn = document.querySelector('#likes');
+      likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`
     }
   })
   // console.log(numLikes)
 }
 
-// countAdd()
+countAdd()
