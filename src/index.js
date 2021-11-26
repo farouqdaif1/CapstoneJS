@@ -17,21 +17,19 @@ import { getikes, addLikes } from './likes';
 const displayModal = async () => {
   const data = await getMeals();
   popCard(data);
+
   const likesNum = await getikes();
   // const postLikes = await addLikes();
   // console.log(likesNum)
   const likesBtn = document.querySelectorAll('.like');
   // console.log(likesBtn);
-  // console.log(data.meals)
   // likesBtn.innerHTML = '<i class="fas fa-heart"></i>' + likesNum[0].likes + Likes;
-  likesBtn.forEach((btn) => {
+  likesBtn.forEach((btn, i) => {
     btn.addEventListener('click', (e) => {
-      // const id = (e.target.parentElement.parentElement.id).match(/[0-9]/g);
-      // console.log(id);
-      // console.log(typeof(id));
-
-      countAdd(id)
-      // console.log(parseInt(e.target.parentElement.parentElement.parentElement.id));
+      // console.log(data.meals[i].idMeal);
+      // const x = `${countAdd(data.meals[i].idMeal)}`;
+      // /      showLikes(x);
+      countAdd(data.meals[i].idMeal);
     });
   });
   const comBTn = document.querySelectorAll('.com');
@@ -64,29 +62,70 @@ document.addEventListener('DOMContentLoaded', async () => {
   await displayModal();
 });
 
+const showLikes = (arr, id) => {
+  arr.forEach((like, index) => {
+    if (like.item_id === id) {
+      addLikes(id);
+      like.likes += 1;
+      console.log(like);
+      console.log(`${like.likes}`);
+      // showLikes(arr);
+      // showLikes(`${like.likes}`);
+      const likesBtn = document.querySelector('#likes');
+      likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' + '  ' + `${arr} Likes`;
+    }
+  });
+  // likesBtn.forEach((likeBtn) => {
+  // });
+};
+
 // count+1
 
 const countAdd = async (id) => {
   const numLikes = await getikes();
-  console.log(numLikes);
-  numLikes.forEach((like, idx) => {
-    if (like.item_id === id) {
-      addLikes(id);
-      like.likes += 1;
-      console.log(`${like.likes}hello`);
-      const likesTxt = document.querySelectorAll('#num-liks');
-      // console.log(likesBtn);
-      // console.log(typeof(likesBtn));
-      // likesTxt[id].innerHTML = likesBtn.forEach((oneBtn) => {
-      //   oneBtn.addEventListener('click', () => {
-      //     oneBtn.innerHTML = 'hello';
-      //   });
-      // });
+  // console.log(numLikes);
+  const arr = [];
+  for (let i = 2; i < 8; i + 1) {
+    arr.push(numLikes[i]);
+  }
+  console.log(arr);
 
-      // likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`
-    }
-  });
-  // console.log(numLikes)
+  // arr.forEach((like, index) => {
+  // if (like.item_id === id) {
+  // addLikes(id);
+  // like.likes += 1;
+  // console.log(like);
+  // const likesTxt = document.querySelectorAll('#num-liks');
+  // console.log(`${like.likes}`);
+  showLikes(arr, id);
+  // showLikes(`${like.likes}`);
+  // }
+  // });
 };
 
-// countAdd()
+// countAdd();
+// likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`
+// numLikes.forEach( (like, i) => {
+//   if(like.item_id === id ){
+//     addLikes(id);
+//     like.likes  =like.likes + 1;
+//     console.log(like.likes)
+//     const likesBtn = document.querySelector('#likes');
+//     likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`
+
+// const likesNum = await getikes();
+// const postLikes = await addLikes();
+// console.log(likesNum)
+// const likesBtn = document.querySelectorAll('.like');
+// console.log(likesBtn);
+// console.log(data.meals)
+// likesBtn.innerHTML = '<i class="fas fa-heart"></i>' + likesNum[0].likes + Likes;
+// likesBtn.forEach((btn) => {
+// btn.addEventListener('click', (e) => {
+// const id = (e.target.parentElement.parentElement.id).match(/[0-9]/g);
+// console.log(id);
+// console.log(typeof(id));
+// countAdd(id)
+// console.log(parseInt(e.target.parentElement.parentElement.parentElement.id));
+//   });
+// });
