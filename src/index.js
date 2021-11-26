@@ -67,7 +67,7 @@ const showLikes = (arr,i) =>{
 
  const countAdd = async (id) => {
   const numLikes = await getikes();
-  console.log(numLikes);
+  // console.log(numLikes);
   numLikes.forEach( (like, i) => {
     if(like.item_id === id ){
       addLikes(id);
