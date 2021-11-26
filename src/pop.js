@@ -51,6 +51,7 @@ const popCard = async (data) => {
       pra.innerText = `comments(${num})`;
       commnts.appendChild(pra);
       const allComments = document.createElement('div');
+      allComments.className = 'allcomments';
       content.appendChild(allComments);
       const commentsAll = await getComments(idx.id);
       commentsAll.forEach((e) => {
@@ -90,6 +91,7 @@ const popCard = async (data) => {
       const submitCom = document.createElement('button');
       submitCom.type = 'submit';
       submitCom.className = 'form_item1';
+      submitCom.className = 'form_v';
       submitCom.className = `submit_${meal.idMeal}`;
       submitCom.innerHTML = 'Comment';
       form.appendChild(submitCom);

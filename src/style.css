@@ -190,6 +190,7 @@ footer {
   background-color: #f5c33b;
   color: #fa383e;
   width: 600px;
+
   /* height: 600px; */
   z-index: 2;
   padding: 20px;
@@ -212,13 +213,81 @@ footer {
   font-weight: 900;
   cursor: pointer;
 }
+
+#popup .content img {
+  width: 80%;
+  align-self: center;
+  margin-bottom: 3%;
+  border-radius: 3%;
+  -webkit-border-radius: 3%;
+  -moz-border-radius: 3%;
+  -ms-border-radius: 3%;
+  -o-border-radius: 3%;
+}
+
+#popup .content .item-name {
+  align-self: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff1018;
+}
+
+#popup .content .comment-num {
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #ff1018;
+}
+
+#popup .content .allcomments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#popup .content .allcomments p {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 50%;
+  padding: 1%;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 #popup .content .form_title {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: #ff1018;
 }
 
 #popup .content .form_x {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup .content .form_x .form_item {
+  width: 80%;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2%;
+  border-radius: 2.5%;
+  -webkit-border-radius: 2.5%;
+  -moz-border-radius: 2.5%;
+  -ms-border-radius: 2.5%;
+  -o-border-radius: 2.5%;
+}
+
+#popup .content .form_x button {
+  border: none;
+  padding: 1%;
+  background-color: #ff1018;
+  color: white;
 }
