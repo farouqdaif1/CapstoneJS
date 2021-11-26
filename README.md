@@ -7,11 +7,6 @@ A JavaScript project for the Leaderboard list app, using webpack and ES6 feature
 ## Video link
 
 [loom Link] (https://loom.com/share/cebf106ada4f4ac789399a6eb27dd385)
-
-## Live Demo
-
-[Live Demo Link]
-
 ## Built With
 
 - HTML
@@ -50,11 +45,12 @@ plugins: [
   }),
 ],
 ```
-
+- Run `npm install` 
 - Run `npm run build` to update the **/dist/index.html**.
 - Then it is time to add some style to the project:
   Follow the steps in [loading CSS](https://webpack.js.org/guides/asset-management/#loading-css) guide.
   Next, execute `npm run build` and check if the HTML body style has changed.
+- Run `npm test` 
 
 #### Setup local dev server
 

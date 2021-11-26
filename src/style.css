@@ -149,7 +149,7 @@ footer {
   flex-direction: column;
   padding: 1%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: #f5c33b;
   font-family: "Libre Baskerville", serif;
   color: #ff1018;
