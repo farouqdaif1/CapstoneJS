@@ -62,9 +62,6 @@ const showLikes = (arr,i) =>{
   const likesBtn = document.querySelector('#likes');
   likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${arr[0].likes} Likes`;
 }
-
-// count+1
-
  const countAdd = async (id) => {
   const numLikes = await getikes();
   // console.log(numLikes);
@@ -78,7 +75,5 @@ const showLikes = (arr,i) =>{
       likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' +"  "+ `${numLikes[i].likes} Likes`;
     }
   })
-  // console.log(numLikes)
 }
 
-// countAdd()
