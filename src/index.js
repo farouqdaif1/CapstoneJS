@@ -1,32 +1,16 @@
 import './style.css';
 import getMeals from './consume-api';
-// import counter from './counter';
 import render from './render';
 import popCard from './pop';
 import { getikes, addLikes } from './likes';
-// import { getikes, addLoikes } from './creatnewapp';
-// import { getComments, counter } from './comments';
 
 const displayModal = async () => {
   const data = await getMeals();
   popCard(data);
-const likesNum = await getikes();
-
-const likesBtn = document.querySelectorAll('.like');
-likesBtn.forEach((btn,i) => {
-  btn.addEventListener('click', (e) => {
-
-  countAdd(data.meals[i].idMeal);
-  })
-
-  const likesNum = await getikes();
-
   const likesBtn = document.querySelectorAll('.like');
-
   likesBtn.forEach((btn, i) => {
-    btn.addEventListener('click', (e) => {
- 
-      countAdd(data.meals[i].idMeal);
+    btn.addEventListener('click', () => {
+      countAdd(data.meals[i].idMeal);// eslint-disable-line
     });
   });
   const comBTn = document.querySelectorAll('.com');
@@ -59,34 +43,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   await displayModal();
 });
 
-const showLikes = (arr, id) => {
-  arr.forEach((like, index) => {
+const countAdd = async (id) => {
+  const numLikes = await getikes();
+  numLikes.forEach((like, i) => {
     if (like.item_id === id) {
       addLikes(id);
       like.likes += 1;
-      console.log(like);
-      console.log(`${like.likes}`);
-
-      const likesBtn = document.querySelector('#likes');
-      likesBtn.innerHTML = '<i class="fas fa-heart"></i> ' + '  ' + `${arr} Likes`;
+      const likesBtn = document.querySelector(`#l-${id}`);
+      likesBtn.innerHTML = `<i class="fas fa-heart">${numLikes[i].likes} Likes</i> `;
     }
   });
-
 };
-
-// count+1
-
-const countAdd = async (id) => {
-  const numLikes = await getikes();
-  // console.log(numLikes);
-  const arr = [];
-  for (let i = 2; i < 8; i + 1) {
-    arr.push(numLikes[i]);
-  }
-  console.log(arr);
-
-  showLikes(arr, id);
-
-};
-
-

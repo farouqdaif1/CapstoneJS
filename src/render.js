@@ -1,16 +1,14 @@
 import getMeals from './consume-api';
-// import { getikes, addLikes } from './likes';
+import { getikes } from './likes';
 
 const mealsList = document.querySelector('.meals');
 // render 6 meals from api
-
 const render = async () => {
   const dataFromAPI = await getMeals();
   const { meals } = dataFromAPI;
   const numLikes = await getikes();
   meals.forEach((element, index) => {
     if (index < 6) {
-      // console.log(numLikes[1].likes)
       mealsList.innerHTML += `
         <li  id=id-${element.idMeal}>
         <figure>
@@ -19,8 +17,7 @@ const render = async () => {
         </figure>
         <div id="buttons">
         <button class="like" id="l-${element.idMeal}">
-        '<i class="fas fa-heart"></i> '
-        <div class="num-liks">${numLikes[index+2].likes} </div>
+        <i class="fas fa-heart">${numLikes[index + 2].likes} Likes</i> 
         </button>
         <button  id=x-${element.idMeal} class="com ${element.idMeal}">
         <i class="fas fa-comment ${element.idMeal}" ></i>
@@ -31,5 +28,4 @@ const render = async () => {
     }
   });
 };
-
 export default render;

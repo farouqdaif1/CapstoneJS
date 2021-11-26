@@ -111,8 +111,9 @@ main {
   align-items: center;
 }
 
-.meals li #likes {
+.meals li .like {
   display: flex;
+  flex-wrap: nowrap;
   border: none;
   color: white;
   padding: 15px 15px;
@@ -126,6 +127,7 @@ main {
   -o-border-radius: 8%;
 }
 
+/* .meals li .like  */
 .meals li .com {
   display: flex;
   border: none;
@@ -190,8 +192,6 @@ footer {
   background-color: #f5c33b;
   color: #fa383e;
   width: 600px;
-
-  /* height: 600px; */
   z-index: 2;
   padding: 20px;
   border-radius: 5%;
@@ -245,12 +245,14 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 100px;
 }
 
 #popup .content .allcomments p {
   display: flex;
   flex-direction: column;
-  align-items: left;
   width: 50%;
   padding: 1%;
   color: black;

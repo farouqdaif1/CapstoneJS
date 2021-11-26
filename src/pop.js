@@ -105,20 +105,11 @@ const popCard = async (data) => {
           const Inputcoment = document.querySelector(`#insight-${form.id}`);
           const namev = Inputname.value;
           const commentv = Inputcoment.value;
-          // console.log(e.target.previousElementSibling);
-
           await postComments(id.id, namev, commentv);
-          // .then(() => { } showComment(e.target.previousElementSibling, namev, commentv));
           window.location.reload();
         });
       });
     }
   });
 };
-// function showComment(namev, commentv) {
-//   const ulCont = document.querySelector('');
-//   const li = document.createElement('p');
-//   li.innerHTML = `${namev} : ${commentv}`;
-//   ulCont.appendChild(li);
-// }
 export default popCard;

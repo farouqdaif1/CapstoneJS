@@ -5,6 +5,4 @@ const getMeals = async () => {
   const result = data.json();
   return result;
 };
-// console.log(result);
-// getMeals().then((result) => console.log(result));
 export default getMeals;
