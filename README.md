@@ -14,7 +14,8 @@ In this project we will prepare a Kanban board with a GitHub project, with my Le
 - JS
 - WEBPACK
 - API service
-
+## live link
+(https://chirmpo.netlify.app/)
 ## Getting Started
 
 **To clone this project**
